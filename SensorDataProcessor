@@ -1,9 +1,13 @@
+import java.io.BufferedWriter; // BufferedWriter import statnment 
+
+
 public class SensorDataProcessor {
 // Senson data and limits.
-        public double[][][] data;
-        public double[][] limit;
-// constructor
-public DataProcessor(double[][][] data, double[][] limit) {
+        private final double[][][] data; //final for the parameters to indicate that they are not meant to be modified after assignment
+        private final double[][] limit;
+// constructor 
+// Rename the constructor name to match the class name 
+public SensorDataProcessor(double[][][] data, double[][] limit) {
         this.data = data;
         this.limit = limit;
     }
