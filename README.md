@@ -1,6 +1,6 @@
 # Software-Construction-Assignment-2
 
-Assignment Two: Github
+Assignment Two: Sensor Data Processor 
 
 Ms. Latifah Alharthi
 
