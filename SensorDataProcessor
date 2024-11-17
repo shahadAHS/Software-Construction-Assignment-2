@@ -1,5 +1,5 @@
 import java.io.BufferedWriter; // BufferedWriter import statnment 
-
+import java.io.FileWriter; // FileWriter import statnment 
 
 public class SensorDataProcessor {
 // Senson data and limits.
