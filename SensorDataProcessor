@@ -2,15 +2,16 @@ import java.io.BufferedWriter; // BufferedWriter import statnment
 import java.io.FileWriter; // FileWriter import statnment 
 
 public class SensorDataProcessor {
-// Senson data and limits.
-        private final double[][][] data; //final for the parameters to indicate that they are not meant to be modified after assignment
+// Declaring 'data' and 'limit' sensors as 'private final' ensures encapsulation and immutability, protecting the object's state and preventing reassignment.
+        private final double[][][] data; 
         private final double[][] limit;
-// constructor 
+
 // Rename the constructor name to match the class name 
 public SensorDataProcessor(double[][][] data, double[][] limit) {
         this.data = data;
         this.limit = limit;
     }
+
 // Calculates the average of sensor data
 private double average(double[] array) {
     double sum = 0;
@@ -19,6 +20,7 @@ private double average(double[] array) {
     }
     return sum / array.length; // Return the average
 }
+
 // calculate data
         public void calculate(double d) {
         int i, j, k = 0;
