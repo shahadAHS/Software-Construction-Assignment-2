@@ -1,6 +1,6 @@
 # Software-Construction-Assignment-2
 
-Assignment Two: Sensor Data Processor 
+*Assignment Two:* Sensor Data Processor 
 
 Ms. Latifah Alharthi
 
