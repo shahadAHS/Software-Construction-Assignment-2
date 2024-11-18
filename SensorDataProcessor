@@ -1,10 +1,10 @@
-import java.io.BufferedWriter; // BufferedWriter import statement 
+import java.io.BufferedWriter; // BufferedWriter import statement | Done by Sadeem
 import java.io.FileWriter; // FileWriter import statement
 import java.io.IOException; // IOException import statement 
 import java.util.Arrays; // Arrays import statement 
 
 public class SensorDataProcessor {
-// Declaring 'data' and 'limit' sensors as 'private final' ensures encapsulation and immutability, protecting the object's state and preventing reassignment.
+// Declaring 'data' and 'limit' sensors as 'private final' ensures encapsulation and immutability, protecting the object's state and preventing reassignment |Done by Sadeem
         private final double[][][] data; 
         private final double[][] limit;
 
@@ -13,7 +13,7 @@ public class SensorDataProcessor {
     private static final double UPPER_NUMBER = 50.0;
     
 
-// Rename the constructor name to match the class name 
+// Rename the constructor name to match the class name | Done by Sadeem
 public SensorDataProcessor(double[][][] data, double[][] limit) {
         this.data = data;
         this.limit = limit;
@@ -49,7 +49,7 @@ private double average(double[] array) {
                         //Apply transformations and checks to the data
                         data2[i][j][k] = data[i][j][k] / division - Math.pow(limit[i][j], 2.0);
 
-                        // Checking if the average value of the transformed data is within the specified range
+                        // Checking if the average value of the transformed data is within the specified range | Done by Sadeem
                         if (average(data2[i][j]) > LOWER_NUMBER && average(data2[i][j]) < UPPER_NUMBER)
                             break; // Exit the loop
 
@@ -77,7 +77,7 @@ private double average(double[] array) {
             System.out.println("Error= " + e);
         }
     }
-    // Main method to run the program and test the SensorDataProcessor class
+    // Main method to run the program and test the SensorDataProcessor class | Done by all the group members
     public static void main(String[] args) {
         // 3D array 'data' with sample values
         double[][][] data = {
