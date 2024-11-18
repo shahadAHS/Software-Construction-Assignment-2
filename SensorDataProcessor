@@ -55,11 +55,11 @@ private double average(double[] array) {
             }
             for (i = 0; i < data2.length; i++) {
                 for (j = 0; j < data2[0].length; j++) {
-                    out.write(data2[i][j] + "\t");
+                    out.write(Arrays.toString(data2[i][j]) + "\t"); // Converts the 1D array to a string format
                 }
             }
             out.close();
-        } catch (Exception e) {
+        } catch (IOException e) { // IOException instead of a generic Exception
             System.out.println("Error= " + e);
         }
     }
