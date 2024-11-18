@@ -57,7 +57,7 @@ private double average(double[] array) {
                         else if (Math.max(data[i][j][k], data2[i][j][k]) > data[i][j][k])
                             break; // Exit the loop
 
-                            // If data2 value is significantly greater, double it
+                            // If the data2 value is significantly greater, double it
                         else if (Math.pow(Math.abs(data[i][j][k]), 3) < Math.pow(Math.abs(data2[i][j][k]), 3)
                                 && average(data[i][j]) < data2[i][j][k] && (i + 1) * (j + 1) > 0) {
                             data2[i][j][k] *= 2; // double the value under these specific conditions
@@ -65,13 +65,35 @@ private double average(double[] array) {
                     }
                 }
             }
+            // Write the transformed data to the file and print to the console
             for (int i = 0; i < data2.length; i++) {
                 for (int j = 0; j < data2[0].length; j++) {
                     out.write(Arrays.toString(data2[i][j]) + "\t"); // Converts the 1D array to a string format
+                    System.out.println(Arrays.toString(data2[i][j])); // Print to console for visibility
                 }
+                out.newLine(); // New line after each row in the 3D array
             }
         } catch (IOException e) { // IOException instead of a generic Exception
             System.out.println("Error= " + e);
         }
+    }
+    // Main method to run the program and test the SensorDataProcessor class
+    public static void main(String[] args) {
+        // 3D array 'data' with sample values
+        double[][][] data = {
+                {{1.0, 2.0, 3.0}, {2.0, 3.0, 4.0}, {3.0, 4.0, 5.0}},
+                {{4.0, 5.0, 6.0}, {5.0, 6.0, 7.0}, {6.0, 7.0, 8.0}},
+                {{7.0, 8.0, 9.0}, {8.0, 9.0, 10.0}, {9.0, 10.0, 11.0}}
+        };
+        // 2D array 'limit' with sample values
+        double[][] limit = {
+                {1.0, 2.0, 3.0},
+                {4.0, 5.0, 6.0},
+                {7.0, 8.0, 9.0}
+        };
+        // Instantiate SensorDataProcessor with the sample data
+        SensorDataProcessor processor = new SensorDataProcessor(data, limit);
+        // Call the calculate method with a division value of 2.0
+        processor.calculate(2.0);
     }
 }
