@@ -1,6 +1,7 @@
 import java.io.BufferedWriter; // BufferedWriter import statnment 
 import java.io.FileWriter; // FileWriter import statnment 
-
+import java.io.IOException; // IOException import statnment
+import java.util.Arrays; // Arrays import statnment
 public class SensorDataProcessor {
 // Declaring 'data' and 'limit' sensors as 'private final' ensures encapsulation and immutability, protecting the object's state and preventing reassignment.
         private final double[][][] data; 
